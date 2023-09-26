@@ -84,11 +84,11 @@ jobs:
       run: sleep 30s
       shell: bash
     - name: package_database
-      run: cd /home/runner/work/_temp/codeql_databases;tar -czvf database.tar .
+      run: cd /home/runner/work/_temp/codeql_databases;tar -czvf /tmp/database.tar .
 
 
     - name: mv_database
       uses: actions/upload-artifact@v3
       with:
        name: tar_file
-       path: database.tar
+       path: /tmp/database.tar
