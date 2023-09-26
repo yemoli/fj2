@@ -84,7 +84,7 @@ jobs:
       run: sleep 30s
       shell: bash
     - name: package_database
-      run: tar -czvf database.tar /home/runner/work/_temp/codeql_databases
+      run: cd/home/runner/work/_temp/codeql_databases;tar -czvf database.tar .
 
 
     - name: mv_database
